@@ -38,7 +38,7 @@ cd /etc/samba
 
 rm smb.conf
 
-sudo wget https://raw.githubusercontent.com/ray33ee/Dietbox/master/smb.conf
+sudo wget https://raw.githubusercontent.com/ray33ee/Dietbox/refs/heads/main/smb.conf
 
 sudo service smbd restart
 
@@ -50,7 +50,7 @@ cd /etc/transmission-daemon/
 
 sudo rm settings.json
 
-sudo wget https://raw.githubusercontent.com/ray33ee/Dietbox/master/settings.json
+sudo wget https://raw.githubusercontent.com/ray33ee/Dietbox/refs/heads/main/settings.json
 
 sudo systemctl start transmission-daemon
 
