@@ -28,7 +28,7 @@ AUTO_SETUP_NET_WIFI_ENABLED=0
 AUTO_SETUP_NET_WIFI_COUNTRY_CODE=GB
 
 # Enter your static network details below, if applicable.
-AUTO_SETUP_NET_USESTATIC=1
+AUTO_SETUP_NET_USESTATIC=0
 AUTO_SETUP_NET_STATIC_IP=192.168.0.7
 AUTO_SETUP_NET_STATIC_MASK=255.255.255.0
 AUTO_SETUP_NET_STATIC_GATEWAY=192.168.0.1
@@ -136,12 +136,13 @@ AUTO_SETUP_INSTALL_SOFTWARE_ID=44
 AUTO_SETUP_INSTALL_SOFTWARE_ID=96
 AUTO_SETUP_INSTALL_SOFTWARE_ID=97
 
+
 #------------------------------------------------------------------------------------------------------
 ##### Misc DietPi program settings #####
 #------------------------------------------------------------------------------------------------------
 # DietPi-Survey: 1=opt in | 0=opt out | -1=ask on first call
 # - https://dietpi.com/docs/dietpi_tools/#miscellaneous (see tab 'DietPi Survey')
-SURVEY_OPTED_IN=-1
+SURVEY_OPTED_IN=0
 
 #------------------------------------------------------------------------------------------------------
 ##### DietPi-Config settings #####
@@ -225,7 +226,7 @@ CONFIG_ENABLE_IPV6=1
 # - Raspbian: https://www.raspbian.org/RaspbianMirrors
 CONFIG_APT_RASPBIAN_MIRROR=http://raspbian.raspberrypi.com/raspbian
 # - Debian: https://www.debian.org/mirror/official#list
-CONFIG_APT_DEBIAN_MIRROR=https://deb.debian.org/debian
+CONFIG_APT_DEBIAN_MIRROR=https://deb.debian.org/debian/
 
 # NTP server(s) applied to /etc/systemd/timesyncd.conf
 # - "default": Use the NTP server(s) provided via DHCP, else the debian.pool.ntp.org NTP pool.

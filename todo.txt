@@ -1,8 +1,14 @@
-mkdir /mnt/hdd
+################################## Remove installed dietpi_userdata and mount disk
 
-echo "/dev/sda1 /mnt/hdd ext4 noatime,lazytime,rw,noauto,x-systemd.automount" >> /etc/fstab
+rm -r /mnt/dietpi_userdata
 
-chmod -R 777 /mnt/hdd
+mkdir /mnt/dietpi_userdata
+
+echo "/dev/sda1 /mnt/dietpi_userdata ext4 noatime,lazytime,rw,noauto,x-systemd.automount" >> /etc/fstab
+
+chmod -R 777 /mnt/dietpi_userdata
+
+mount -t ext4 /dev/sda1 /mnt/dietpi_userdata
 
 ################################### Setup OpenVPN
 
