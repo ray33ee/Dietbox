@@ -1,0 +1,146 @@
+---
+# Homepage configuration
+# See https://fontawesome.com/search for icons options
+
+title: "Dietbox Dashboard"
+subtitle: "Dietbox"
+logo: "logo.png"
+# icon: "fas fa-skull-crossbones" # Optional icon
+
+header: true
+footer: '<p>Created with <span class="has-text-danger">❤️</span> with <a href="https://bulma.io/">bulma</a>, <a href="https://vuejs.org/">vuejs</a> & <a href="https://fontawesome.com/">font awesome</a> // Fork me on <a href="https://github.com/bastienwirtz/homer"><i class="fab fa-github-alt"></i></a></p>' # set false if you want to hide it.
+
+# Optional theme customization
+theme: default
+
+# Optional theme customization (color overrrides)
+# overrrides can also be done using CSS vars 
+colors:
+  light:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#f5f5f5"
+    card-background: "#ffffff"
+    text: "#363636"
+    text-header: "#ffffff"
+    text-title: "#303030"
+    text-subtitle: "#424242"
+    card-shadow: rgba(0, 0, 0, 0.1)
+    link: "#3273dc"
+    link-hover: "#363636"
+  dark:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#131313"
+    card-background: "#2b2b2b"
+    text: "#eaeaea"
+    text-header: "#ffffff"
+    text-title: "#fafafa"
+    text-subtitle: "#f5f5f5"
+    card-shadow: rgba(0, 0, 0, 0.4)
+    link: "#3273dc"
+    link-hover: "#ffdd57"
+
+# Optional navbar
+# links: [] # Allows for navbar (dark mode, layout, and search) without any links
+links:
+  - name: "Repo"
+    icon: "fab fa-github"
+    url: "https://github.com/ray33ee/Dietbox"
+    target: "_blank" # optional html a tag target attribute
+  - name: "Wiki"
+    icon: "fas fa-book"
+    url: "https://www.wikipedia.org/"
+  - name: "Dietpi"
+    url: "https://dietpi.com/"
+  # this will link to a second homer page that will load config from additional-page.yml and keep default config values as in config.yml file
+  # see url field and assets/additional-page.yml.dist used in this example:
+  #- name: "another page!"
+  #  icon: "fas fa-file-alt"
+  #  url: "#additional-page" 
+
+# Services
+# First level array represent a group.
+# Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
+services:
+  - name: "Applications"
+    icon: "fas fa-cloud"
+    items:
+      - name: "Get started"
+        icon: "fa-solid fa-download"
+        subtitle: "Start using Homer in a few minutes"
+        tag: "setup"
+        url: "https://github.com/bastienwirtz/homer?tab=readme-ov-file#getting-started"
+      - name: "Configuration"
+        icon: "fa-solid fa-sliders"
+        subtitle: "Configuration options documentation"
+        tag: "setup"
+        url: "https://github.com/bastienwirtz/homer/blob/main/docs/configuration.md"
+      - name: "Theming"
+        icon: "fa-solid fa-palette"
+        subtitle: "Customize Homer appearance"
+        tag: "theming"
+        url: "https://github.com/bastienwirtz/homer/blob/main/docs/theming.md"
+      - name: "Smart cards"
+        icon: "fa-solid fa-palette"
+        subtitle: "Displays dynamic information or actions."
+        tag: "setup"
+        url: "https://github.com/bastienwirtz/homer/blob/main/docs/theming.md"
+      - name: "Dashboard icons"
+        icon: "fa-solid fa-icons"
+        subtitle: "Dashboard icons"
+        tag: "setup"
+        url: "https://github.com/walkxcode/dashboard-icons"
+  - name: "Apps"
+    icon: "fas fa-cloud"
+    items:
+      - name: "Admin"
+        subtitle: "Dietpi dashboard"
+        url: "http://192.168.0.7:5252"
+        logo: "https://github.com/ray33ee/Dietbox/blob/main/icons/dietpi.png?raw=true"
+      - name: "Transmission"
+        subtitle: "Transmission BitTorrent client"
+        url: "http://192.168.0.7:9091"
+        tag: "torrent"
+        logo: "https://github.com/ray33ee/Dietbox/blob/main/icons/transmission.png?raw=true"
+      - name: "Plex"
+        subtitle: "Plex media server web interface"
+        url: "http://192.168.0.7:32400"
+        logo: "https://github.com/ray33ee/Dietbox/blob/main/icons/plex.png?raw=true"
+  - name: "System"
+    icon: "fas fa-cloud"
+    items:
+      - name: "Statistics"
+        subtitle: "Display system stats and diagnostics"
+        url: "http://192.168.0.7:5252"
+        logo: "https://github.com/ray33ee/Dietbox/blob/main/icons/statistics.png?raw=true"
+      - name: "Terminal"
+        subtitle: "Full dietpi terminal"
+        url: "http://192.168.0.7:5252/terminal"
+        logo: "https://github.com/ray33ee/Dietbox/blob/main/icons/terminal.png?raw=true"
+      - name: "Services"
+        subtitle: "Manage Linux system services and daemons"
+        url: "http://192.168.0.7:5252/service"
+        logo: "https://github.com/ray33ee/Dietbox/blob/main/icons/software.png?raw=true"
+      - name: "Processes"
+        subtitle: "View, kill, terminate, pause/resume Linuc processes"
+        url: "http://192.168.0.7:5252/process"
+        logo: "https://github.com/ray33ee/Dietbox/blob/main/icons/processes.png?raw=true"
+      - name: "Details and disk usage"
+        subtitle: "More in depth system stats including full disk usage via linux dash"
+        url: "http://192.168.0.7/linuxdash/app"
+        logo: "https://github.com/ray33ee/Dietbox/blob/main/icons/disk.png?raw=true"
+      - name: "Power"
+        subtitle: "Shutdown or restart DietBox. Also view system information"
+        url: "http://192.168.0.7:5252/management"
+        logo: "https://github.com/ray33ee/Dietbox/blob/main/icons/power.png?raw=true"
+      - name: "File Browser"
+        subtitle: "Browse all files on DietBox"
+        url: "http://192.168.0.7:5252/browser"
+        logo: "https://github.com/ray33ee/Dietbox/blob/main/icons/files.png?raw=true"
+
+
+
+
