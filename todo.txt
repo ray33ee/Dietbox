@@ -68,6 +68,8 @@ cd /var/www/homer/assets
 
 rm config.yml
 
+wget https://raw.githubusercontent.com/ray33ee/Dietbox/refs/heads/main/config.yml
+
 ################################### Test IP
 
 curl https://ipinfo.io/ip
