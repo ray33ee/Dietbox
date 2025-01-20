@@ -138,6 +138,7 @@ AUTO_SETUP_INSTALL_SOFTWARE_ID=97
 AUTO_SETUP_INSTALL_SOFTWARE_ID=63
 AUTO_SETUP_INSTALL_SOFTWARE_ID=200
 AUTO_SETUP_INSTALL_SOFTWARE_ID=205
+AUTO_SETUP_INSTALL_SOFTWARE_ID=130
 
 
 #------------------------------------------------------------------------------------------------------

@@ -70,6 +70,16 @@ rm config.yml
 
 wget https://raw.githubusercontent.com/ray33ee/Dietbox/refs/heads/main/config.yml
 
+################################### torrent_mover
+
+pip install textual
+
+mkdir /home/move
+
+cd /home/move
+
+wget https://raw.githubusercontent.com/ray33ee/Dietbox/refs/heads/main/tm.py
+
 ################################### Test IP
 
 curl https://ipinfo.io/ip
