@@ -60,9 +60,16 @@ class TorrentMoverApp(App):
                 self.index -= 1
                 self.display_torrent()
         elif button_id == "final":
-            self.notify("Notification")
+            self.exit()
             for item in items:
-                self.notify("Torrent '" + item["name"] + "' (" + str(item["id"]) + ") - " + item["choice"])
+                if (item["choice"] != "leave"):
+                    r = subprocess.run(['transmission-remote', '-n' + transmission_username + ":" + transmission_password, '-t', str(item['id']), "--move", "/mnt/dietpi_userdata/" +  item["choice"]], capture_output=True, text=True)
+                    if (r.returncode != 0):
+                        print("Bad --move subprocess return code")
+                        app.exit()
+                    self.notify("Torrent '" + item["name"] + "' (" + str(item["id"]) + ") - " + item["choice"])
+            # Then at the end ask the user if they want to rescan their plex library
+            subprocess.run(['/usr/lib/plexmediaserver/Plex Media Scanner', '-a'])
 
     def format_label(self):
         return str(self.index+1) + "/" + str(len(self.l))
